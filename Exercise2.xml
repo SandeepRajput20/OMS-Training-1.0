@@ -1,0 +1,49 @@
+<Party partyId="SANDEEP1002" partyTypeId="PERSON" statusId="PARTY_ENABLED"/>
+<PartyStatus partyId="SANDEEP1002" statusId="PARTY_ENABLED" statusDate="2022-01-01 12:00:00.0"/>
+<PartyRole partyId="SANDEEP1002" roleTypeId="CUSTOMER"/>
+
+<Person partyId="SANDEEP1002" firstName="Steve" lastName="Denis"/>
+
+<OrderHeader orderId="SANDEEP0002" orderTypeId="SALES_ORDER" orderName="Sandeep Order 2" salesChannelEnumId="WEB_SALES_CHANNEL" orderDate="2022-02-16 13:27:07.024" entryDate="2008-06-10 13:27:07.024" visitId="10000" statusId="ITEM_APPROVED" createdBy="admin" currencyUom="USD" productStoreId="9000" remainingSubTotal="83.0" grandTotal="83.0"/>
+
+<OrderItem orderId="SANDEEP0002" orderItemSeqId="00002" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="WG-1111" prodCatalogId="DemoCatalog" isPromo="N" quantity="15.0" selectedAmount="0.0" unitPrice="59.99" unitListPrice="60.0" isModifiedPrice="N" itemDescription="Micro Chrome Widget" statusId="ITEM_APPROVED"/>
+
+<PartyRole partyId="SANDEEP1002" roleTypeId="BILL_TO_CUSTOMER"/>
+<PartyRole partyId="SANDEEP1002" roleTypeId="PLACING_CUSTOMER"/>
+<PartyRole partyId="SANDEEP1002" roleTypeId="SHIP_TO_CUSTOMER"/> 
+ 
+<OrderRole orderId="SANDEEP0002" partyId="SANDEEP1002" roleTypeId="BILL_TO_CUSTOMER"/>
+<OrderRole orderId="SANDEEP0002" partyId="SANDEEP1002" roleTypeId="PLACING_CUSTOMER"/>
+<OrderRole orderId="SANDEEP0002" partyId="SANDEEP1002" roleTypeId="SHIP_TO_CUSTOMER"/>
+
+<ContactMech contactMechId="SHIPING0002" contactMechTypeId="POSTAL_ADDRESS"/>
+<PostalAddress contactMechId="SHIPING0002" toName="Steve Denis" address1="HotWax Media Inc. 136 S MAIN ST #A200" city="Salt Lake City" postalCode="84101" countryGeoId="USA" stateProvinceGeoId="UT"/>
+<PartyContactMech partyId="SANDEEP1002" contactMechId="SHIPING0002" fromDate="2022-01-01 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="SANDEEP1002" contactMechId="SHIPING0002" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2022-01-01 00:00:00.000"/>
+
+<ContactMech contactMechId="BILLING0002" contactMechTypeId="POSTAL_ADDRESS"/>
+<PostalAddress contactMechId="BILLING0002" toName="Steve Denis" address1="HotWax Media Inc. 136 S MAIN ST #A200" city="Salt Lake City" postalCode="84101" countryGeoId="USA" stateProvinceGeoId="UT"/>
+<PartyContactMech partyId="SANDEEP1002" contactMechId="BILLING0002" fromDate="2001-05-13 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="SANDEEP1002" contactMechId="BILLING0002" contactMechPurposeTypeId="BILLING_LOCATION" fromDate="2022-01-01 00:00:00.000"/>
+
+<ContactMech contactMechId="EMAIL0002" contactMechTypeId="EMAIL_ADDRESS" infoString="steve.Denis@hotwax.com"/>
+<PartyContactMech partyId="SANDEEP1002" contactMechId="EMAIL0002" fromDate="2001-05-13 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="SANDEEP1002" contactMechId="EMAIL0002" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2022-01-01 00:00:00.000"/>
+
+<ContactMech contactMechId="PHONE0002" contactMechTypeId="TELECOM_NUMBER"/>
+<TelecomNumber contactMechId="PHONE0002" areaCode="877" contactNumber="736-4080"/>
+<PartyContactMech partyId="SANDEEP1002" contactMechId="PHONE0002" fromDate="2001-05-13 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="SANDEEP1002" contactMechId="PHONE0002" contactMechPurposeTypeId="PHONE_WORK" fromDate="2022-01-01 00:00:00.000"/>
+  
+<OrderContactMech orderId="SANDEEP0002" contactMechPurposeTypeId="BILLING_LOCATION" contactMechId="BILLING0002"/>
+<OrderContactMech orderId="SANDEEP0002" contactMechPurposeTypeId="SHIPPING_LOCATION" contactMechId="SHIPING0002"/>
+
+<OrderItemShipGroup orderId="SANDEEP0002" shipGroupSeqId="00002" shipmentMethodTypeId="GROUND" carrierPartyId="UPS" carrierRoleTypeId="CARRIER" contactMechId="SHIPING0002" maySplit="N" isGift="N"/>
+<OrderItemShipGroupAssoc orderId="SANDEEP0002" orderItemSeqId="00002" shipGroupSeqId="00002" quantity="15.0"/>
+<OrderItemShipGrpInvRes orderId="SANDEEP0002" shipGroupSeqId="00002" orderItemSeqId="00002" inventoryItemId="9000" reserveOrderEnumId="INVRO_FIFO_REC" quantity="15.0" quantityNotAvailable="0.0" reservedDatetime="2022-01-01 16:49:31.474" createdDatetime="2022-01-01 16:49:31.474" promisedDatetime="2022-01-01 16:49:27.392" priority="2"/>
+
+<PaymentMethod paymentMethodId="2022" paymentMethodTypeId="CREDIT_CARD" partyId="SANDEEP1001" fromDate="2022-01-01 00:00:00.000"/>
+<CreditCard paymentMethodId="2022" cardType="CCT_VISA" cardNumber="4242424242424242" expireDate="02/23" firstNameOnCard="Mark" lastNameOnCard="Tailor" contactMechId="BILLING0001"/>
+
+<OrderPaymentPreference orderPaymentPreferenceId="1002" orderId="SANDEEP0002" paymentMethodTypeId="CREDIT_CARD" paymentMethodId="2022" presentFlag="N" swipedFlag="N" overflowFlag="N" processAttempt="1" statusId="PAYMENT_AUTHORIZED" needsNsfRetry="N" createdDate="2022-01-01 16:49:27.966" createdByUserLogin="admin"/>
+<PaymentGatewayResponse paymentGatewayResponseId="1002" orderPaymentPreferenceId="9000" altReference="1250501206473" amount="60.0" currencyUomId="USD" gatewayCode="100" gatewayFlag="A" gatewayMessage="This is a test processor; no payments were captured or authorized." paymentMethodId="2022" paymentMethodTypeId="CREDIT_CARD" paymentServiceTypeEnumId="PRDS_PAY_AUTH" referenceNum="1250501206473" transCodeEnumId="PGT_AUTHORIZE" transactionDate="2022-02-16 14:56:46.498"/>
